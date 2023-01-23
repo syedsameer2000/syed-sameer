@@ -1,0 +1,204 @@
+/* ======= Defaults ======= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: 700;
+}
+body {
+  font-size:20px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+  color: #000;
+}
+/* ======= colors ======= */
+:root {
+  /* Font */
+  --font-primary: 'League Spartan', sans-serif;
+  --font-weight: 700;
+  --font-default-size: 14px;
+    
+}
+/* ======= main ======= */
+main {
+  width: 100vw;
+  min-height: 90vh;
+}
+/* ======= Container  ======= */
+/* main theme */
+.container.main-theme {
+  background-color: skyblue;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+}
+/* ======= Calc container  ======= */
+.calculator {
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  width: 30vw;
+  max-width: 400px; 
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 10px 0px 0px black;
+}
+/* ======= Calc header  ======= */
+.calculator-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* title (calc) */
+.theme-toggle-title {
+  font-size: 2rem;
+
+}
+/* theme text (theme) */
+.theme-text {
+  margin-top: 30px;
+}
+.switch {
+  border: none;
+  width: 85px;
+  border-radius: 40px;
+  padding: 5px;
+  height: 30px;
+  margin-top: 8px;
+}
+/* main theme */
+.switch.main-theme {
+  background-color:white;
+}
+/* numbers */
+.theme-toggle-numbers {
+  display: flex;
+  justify-content: space-around;
+}
+.calc-screen {
+  overflow: hidden;
+  width: 100%;
+  height: 100px;
+  border-radius: 10px;
+  background-color: cornflowerblue;
+  padding: 1.5rem;
+  text-align: end;
+}
+/* Previous calculation */
+.calc-screen .previous-operation {
+  font-size: 16px;
+  margin-bottom: 10px;
+  height: 20%;
+  opacity: .5;
+}
+/* Current calculation */
+.calc-screen .current-operation {
+  height: 80%;
+  font-size: 3rem;
+  direction: ltr;
+}
+/* main theme */
+.calc-screen.main-theme {
+  background-color: lightgray;
+  border: 2px solid black;
+}
+/* Calc keyboard */
+.calc-keyboard {
+  height: 400px;
+  border-radius: 10px;
+  padding: 2rem;
+  display: grid;
+  grid-template-rows: repeat(5,calc(20% - 10px));
+  grid-template-columns: repeat(4,calc(25% - 7.5px));
+  place-content: center;
+  gap: 15px;
+}
+/* main theme */
+.calc-keyboard.main-theme {
+    background-color: white;
+    border: 2px solid black;
+}
+
+/* Keys */
+.key {
+  border-radius: 10px;
+  font-size: 25px;
+  border: none;
+  font-weight: 700;
+  transition:  background-color .2s, box-shadow .1s;
+}
+/* key reset */
+.key-reset {
+  
+  font-size: 20px;
+  border-radius: 50%;
+}
+/* key assign */
+.key-assign {
+  border-radius: 50%;
+  
+  
+}
+/* key del */
+.key-del {
+  font-size: 24px;
+}
+/* ======== keys main theme ======== */
+.calc-keyboard.main-theme>.key {
+  background-color:orange;
+  
+  color: #000;
+}
+.calc-keyboard.main-theme>.key-reset,
+.calc-keyboard.main-theme>.key-del {
+  background-color: lightsteelblue;
+  border: 2px solid black;
+  
+  color:#000;
+}
+.calc-keyboard.main-theme>.key-assign {
+  font-size: 24px;
+  color: #000;
+  background-color: red;
+  border: 2px solid black;
+    
+}
+/* ======== Hover Effects ========*/
+@media (hover:hover) {
+  .calc-keyboard>.key:hover {
+    transform: scale(.96);
+  }
+  .calc-keyboard>.key:active {
+    transform: scale(.93);
+    opacity: .8;
+    box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0);
+  }
+  .calc-keyboard.main-theme>.key:active {
+    background-color: orangered;
+  }
+  
+}
+/* Transition */
+.main-theme {
+  transition: background-color .5s;
+}
+.me {
+  text-align: center;
+  font-size: 20px;
+}
+a {
+  color: currentColor;
+  font-style: italic;
+  text-decoration: none;
+}
+
+a:visited {
+  color: currentColor;
+}
